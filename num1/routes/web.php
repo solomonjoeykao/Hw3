@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/testt','TestController@index');
-
+Route::post('/testt','TestController@store');
+Route::delete('testt/{message}','TestController@destroy');
+Route::get('testt/{message}','TestController@show');
+Route::get('testt/{message}/edit','TestController@edit');
+Route::patch('testt/{message}','TestController@update');
